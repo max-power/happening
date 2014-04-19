@@ -11,6 +11,13 @@ require "minitest/rails"
 # Uncomment for awesome colorful output
 # require "minitest/pride"
 
+# for Spec expectation style
+class MiniTest::Spec
+  include FactoryGirl::Syntax::Methods
+end
+
 class ActiveSupport::TestCase
   # Add more helper methods to be used by all tests here...
+  include FactoryGirl::Syntax::Methods
 end
+
