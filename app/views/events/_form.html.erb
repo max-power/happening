@@ -1,0 +1,12 @@
+<%= semantic_form_for @event do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :name %>
+    <%= f.input :info, as: :text %>
+    <%= f.input :open_at, input_html: { class: 'datepicker' } %>
+    <%= f.input :ends_at, input_html: { class: 'datepicker' } %>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :input %>
+  <% end %>
+<% end %>

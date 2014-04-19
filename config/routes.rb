@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  root to: 'events#index'
+  
+  # namespace :admin, path: 'manage' do
+  #   resources :events
+  # end
+  
+  resources :events do
+    resources :locations
+  end
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
