@@ -13,6 +13,6 @@ class Organizer
   has_many :events
   
   validates :name, presence: true
-  validates :email, format: /@/
-  validates :website, format: URI.regexp, allow_nil: true
+  validates :email, format: /@/, allow_blank: true
+  validates :website, format: URI.regexp, allow_blank: true
 end

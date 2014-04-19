@@ -23,7 +23,7 @@
 $(document).on('ready page:load', function() {
   $('.timepicker').pickatime();
   $('.datepicker').pickadate({
-    formatSubmit: 'yyyy/mm/dd',
+    formatSubmit: 'yyyy-mm-dd',
     hiddenName: true
   });
 });

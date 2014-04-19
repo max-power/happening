@@ -16,5 +16,10 @@ class Event
   
   validates :name, presence: true
   validates :open_at, presence: true
+  validates :ends_at, presence: true
 #  validates :organizer, presence: true
+
+  def date_range
+    (open_at..ends_at)
+  end
 end

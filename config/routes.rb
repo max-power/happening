@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # namespace :admin, path: 'manage' do
   #   resources :events
   # end
-  
+  resources :organizers
   resources :events do
     resources :locations
   end

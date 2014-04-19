@@ -1,0 +1,13 @@
+<article>
+  <header>
+    <%= link_to 'Edit', edit_resource_path(resource) %> |
+    <%= link_to 'Back', collection_path %>
+  </header>
+  
+  <% attributes.each do |attribute| %>
+    <p>
+    <strong><%= resource_class.human_attribute_name(attribute) %>:</strong>
+      <%= resource.public_send(attribute).to_s %>
+    </p>
+  <% end %>
+</article>

@@ -1,12 +1,20 @@
-<%= semantic_form_for @event do |f| %>
+<%= semantic_form_for resource do |f| %>
+  <%= f.semantic_errors  %>
+  
   <%= f.inputs do %>
+    <!--
+    <%= f.semantic_fields_for :name_translations, OpenStruct.new(resource.name_translations) do |builder| %>
+      <%= f.semantic_errors :name %>
+      <% %i(de en it es).each do |lang| %>
+        <%= builder.input lang %>
+      <% end %>      
+    <% end %>
+    -->
     <%= f.input :name %>
+    <%= f.input :open_at, input_html: { class: 'datepicker', data: { value: f.object.open_at.to_s } } %>
+    <%= f.input :ends_at, input_html: { class: 'datepicker', data: { value: f.object.ends_at.to_s } } %>
     <%= f.input :info, as: :text %>
-    <%= f.input :open_at, input_html: { class: 'datepicker' } %>
-    <%= f.input :ends_at, input_html: { class: 'datepicker' } %>
   <% end %>
 
-  <%= f.actions do %>
-    <%= f.action :submit, :as => :input %>
-  <% end %>
+  <%= f.actions %>
 <% end %>

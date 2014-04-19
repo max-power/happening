@@ -1,24 +1,13 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @event.name %>
-</p>
-
-<p>
-  <strong>Info:</strong>
-  <%= @event.info %>
-</p>
-
-<p>
-  <strong>Open at:</strong>
-  <%= @event.open_at %>
-</p>
-
-<p>
-  <strong>Ends at:</strong>
-  <%= @event.ends_at %>
-</p>
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<article>
+  <header>
+    <h1><%= resource.name %></h1>
+    <!--<%= resource.date_range.to_s(:condensed) %>-->
+    <%= resource.open_at.to_date.to_s(:long) %> – <%= resource.ends_at.to_date.to_s(:long) %>
+    <br>
+    <%= link_to 'Edit', edit_resource_path(resource) %> |
+    <%= link_to 'Destroy', resource, method: :delete, data: { confirm: 'Are you sure?' } %> |
+    <%= link_to 'Back', collection_path %>
+  </header>
+  
+  <div><%= resource.info %></div>
+</article>
