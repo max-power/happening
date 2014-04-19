@@ -38,4 +38,5 @@ gem 'formtastic'
 group :development, :test do
   gem 'minitest-rails', github: 'blowmage/minitest-rails'
   gem 'guard-minitest'
+  gem 'factory_girl_rails'
 end
