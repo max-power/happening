@@ -34,6 +34,7 @@ gem 'mongoid_slug'
 
 gem 'inherited_resources', github: 'josevalim/inherited_resources'
 gem 'formtastic'
+gem 'pickadate-rails', github: 'veracross/pickadate-rails'
 
 group :development, :test do
   gem 'minitest-rails', github: 'blowmage/minitest-rails'

@@ -13,4 +13,17 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require pickadate/picker
+//= require pickadate/picker.date
+//= require pickadate/picker.time
+//= require pickadate/translations/de_DE
 //= require_tree .
+
+
+$(document).on('ready page:load', function() {
+  $('.timepicker').pickatime();
+  $('.datepicker').pickadate({
+    formatSubmit: 'yyyy/mm/dd',
+    hiddenName: true
+  });
+});
