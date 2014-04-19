@@ -7,6 +7,14 @@ GIT
       railties (~> 4.1)
 
 GIT
+  remote: git://github.com/josevalim/inherited_resources.git
+  revision: c7b387198ff5f5b19f5da15d19e7ce742c59e4b7
+  specs:
+    inherited_resources (1.4.1)
+      has_scope (~> 0.6.0.rc)
+      responders (~> 1.0.0.rc)
+
+GIT
   remote: git://github.com/mongoid/mongoid.git
   revision: 030442edebe25ec19c66f37f51b46db22ae25850
   specs:
@@ -58,6 +66,11 @@ GEM
     connection_pool (2.0.0)
     erubis (2.7.0)
     execjs (2.0.2)
+    formtastic (2.2.1)
+      actionpack (>= 3.0)
+    has_scope (0.6.0.rc)
+      actionpack (>= 3.2, < 5)
+      activesupport (>= 3.2, < 5)
     hike (1.2.3)
     i18n (0.6.9)
     jbuilder (2.0.6)
@@ -106,6 +119,8 @@ GEM
     rake (10.3.1)
     rdoc (4.1.1)
       json (~> 1.4)
+    responders (1.0.0)
+      railties (>= 3.2, < 5)
     sass (3.2.19)
     sass-rails (4.0.3)
       railties (>= 4.0.0, < 5.0)
@@ -145,6 +160,8 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+  formtastic
+  inherited_resources!
   jbuilder (~> 2.0)
   jquery-rails
   minitest-rails!

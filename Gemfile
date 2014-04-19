@@ -32,6 +32,8 @@ gem 'puma'
 gem 'mongoid', github: 'mongoid/mongoid'
 gem 'mongoid_slug'
 
+gem 'inherited_resources', github: 'josevalim/inherited_resources'
+gem 'formtastic'
 
 group :development, :test do
   gem 'minitest-rails', github: 'blowmage/minitest-rails'
