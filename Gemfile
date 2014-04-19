@@ -31,10 +31,13 @@ gem 'spring',        group: :development
 gem 'puma'
 gem 'mongoid', github: 'mongoid/mongoid'
 gem 'mongoid_slug'
+gem 'mongoid-tree', github: 'benedikt/mongoid-tree', require: 'mongoid/tree'
+gem 'mongoid_colored_logger', github: 'scottraio/mongoid_colored_logger', group: :development
 
 gem 'inherited_resources', github: 'josevalim/inherited_resources'
 gem 'formtastic'
 gem 'pickadate-rails', github: 'veracross/pickadate-rails'
+
 
 group :development, :test do
   gem 'minitest-rails', github: 'blowmage/minitest-rails'

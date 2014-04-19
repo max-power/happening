@@ -11,8 +11,8 @@
     <% end %>
     -->
     <%= f.input :name %>
-    <%= f.input :open_at, input_html: { class: 'datepicker', data: { value: f.object.open_at.to_s } } %>
-    <%= f.input :ends_at, input_html: { class: 'datepicker', data: { value: f.object.ends_at.to_s } } %>
+    <%= f.input :open_at, input_html: { class: 'datepicker', data: { value: resource.open_at.to_s } } %>
+    <%= f.input :ends_at, input_html: { class: 'datepicker', data: { value: resource.ends_at.to_s } } %>
     <%= f.input :info, as: :text %>
   <% end %>
 

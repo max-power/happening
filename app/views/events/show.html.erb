@@ -1,8 +1,11 @@
+<%= content_for :title, @event.name %>
+
 <article>
   <header>
+Parent <%= @event.parent_id %>
     <h1><%= resource.name %></h1>
     <!--<%= resource.date_range.to_s(:condensed) %>-->
-    <%= resource.open_at.to_date.to_s(:long) %> – <%= resource.ends_at.to_date.to_s(:long) %>
+    <%= format_date_range(resource.open_at, resource.ends_at) %>
     <br>
     <%= link_to 'Edit', edit_resource_path(resource) %> |
     <%= link_to 'Destroy', resource, method: :delete, data: { confirm: 'Are you sure?' } %> |
@@ -11,3 +14,14 @@
   
   <div><%= resource.info %></div>
 </article>
+
+
+<%= render @event.children %>
+<!--
+
+quick form for subevents
+
+I: date I: time I: name
+I: date I: time I: name
+I: date I: time I: name
+-->

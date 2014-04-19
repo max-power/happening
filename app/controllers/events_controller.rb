@@ -1,4 +1,6 @@
 class EventsController < InheritedResources::Base
+#  belongs_to :event, optional: true
+#  belongs_to :event
   respond_to :html, :json
   
   def permitted_params

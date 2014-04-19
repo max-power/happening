@@ -1,4 +1,4 @@
 <li>
   <b><%= link_to event.name, event %></b>
-  <br><%= event.open_at.to_date.to_s(:long) %> – <%= event.ends_at.to_date.to_s(:long) %>
+  <br><%= format_date_range(event.open_at, event.ends_at) %>
 </li>

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # end
   resources :organizers
   resources :events do
+    resources :events
     resources :locations
   end
   
