@@ -15,6 +15,16 @@ GIT
       responders (~> 1.0.0.rc)
 
 GIT
+  remote: git://github.com/kevintyll/minitest-reporters.git
+  revision: 59c18a7c9b8689d650815e388b7db45f9056ac0c
+  specs:
+    minitest-reporters (1.0.2)
+      ansi
+      builder
+      minitest (>= 5.0)
+      powerbar
+
+GIT
   remote: git://github.com/mongoid/mongoid.git
   revision: 030442edebe25ec19c66f37f51b46db22ae25850
   specs:
@@ -53,6 +63,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    ansi (1.4.3)
     arel (5.0.1.20140414130214)
     bson (2.2.2)
     builder (3.2.2)
@@ -94,6 +105,7 @@ GEM
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
+    hashie (2.1.1)
     hike (1.2.3)
     i18n (0.6.9)
     jbuilder (2.0.6)
@@ -127,6 +139,9 @@ GEM
     optionable (0.2.0)
     origin (2.1.1)
     polyglot (0.3.4)
+    powerbar (1.0.11)
+      ansi (~> 1.4.0)
+      hashie (>= 1.1.0)
     pry (0.9.12.6)
       coderay (~> 1.0)
       method_source (~> 0.8)
@@ -208,6 +223,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   minitest-rails!
+  minitest-reporters!
   mongoid!
   mongoid_slug
   puma
