@@ -1,18 +1,31 @@
 <%= content_for :title, @event.name %>
 
-<article>
+<article class="event">
   <header>
-Parent <%= @event.parent_id %>
-    <h1><%= resource.name %></h1>
-    <!--<%= resource.date_range.to_s(:condensed) %>-->
-    <%= format_date_range(resource.open_at, resource.ends_at) %>
     <br>
     <%= link_to 'Edit', edit_resource_path(resource) %> |
     <%= link_to 'Destroy', resource, method: :delete, data: { confirm: 'Are you sure?' } %> |
     <%= link_to 'Back', collection_path %>
+    
+    <h1><%= resource.name %></h1>
+    <!--<%= resource.date_range.to_s(:condensed) %>-->
+    <%= format_date_range(resource.open_at, resource.ends_at) %>
   </header>
   
-  <div><%= resource.info %></div>
+  <section class="event-info">
+    <p>Parent <%= @event.parent_id %></p>
+    <%= resource.info %>
+  </div>
+  
+  <section class="event-schedule">
+    <h2>Schedule</h2>
+    <dl>
+      <% (resource.open_at.to_date..resource.ends_at.to_date).each do |day| %>
+      <dt style="font-weight:bold;text-transform:uppercase"><%= l day, format: '%A, %e. %B' %></dt>
+      <dd>Lorem ipsum dolor sit amet.</dd>
+      <% end %>
+    </dl>
+  </section>
 </article>
 
 

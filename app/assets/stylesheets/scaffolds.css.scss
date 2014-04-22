@@ -4,10 +4,16 @@ body {
 }
 
 body, p, ol, ul, td {
-  font-family: Source Pro Sans,verdana, arial, helvetica, sans-serif;
+  font-family: Clear Sans,Karla,Avenir Next,Aleo,Telex,Noto Sans,verdana, arial, helvetica, sans-serif;
   line-height:1.5;
 //  font-size: 13px;
 //  line-height: 18px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  text-transform:uppercase;
+  font-weight:700;
+  line-height:1.25;
 }
 
 pre {
