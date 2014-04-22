@@ -14,6 +14,7 @@
     <%= f.input :open_at, input_html: { class: 'datepicker', data: { value: resource.open_at.to_s } } %>
     <%= f.input :ends_at, input_html: { class: 'datepicker', data: { value: resource.ends_at.to_s } } %>
     <%= f.input :info, as: :text %>
+    <%= f.input :online, as: :boolean %>
   <% end %>
 
   <%= f.actions %>

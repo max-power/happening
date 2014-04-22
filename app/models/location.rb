@@ -10,9 +10,7 @@ class Location
   field :coordinates, type: Array
 #  field :show_on_map # enum show_on_map: [:never, :always, :after_event_start, :after_event_end], default: :always
   
-  slug name, localize: true
-  
-  embedded_in :event
+  slug :name, localize: true
   
 #  embeds_one :address
 #  embeds_one :point

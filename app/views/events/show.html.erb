@@ -26,10 +26,19 @@
       <% end %>
     </dl>
   </section>
+  
+  
+  <section class="event-locations">
+    <h2>Locations</h2>
+    <%= render @event.locations %>
+  </section>
 </article>
 
 
 <%= render @event.children %>
+
+
+
 <!--
 
 quick form for subevents
